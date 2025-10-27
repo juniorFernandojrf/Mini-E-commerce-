@@ -1,20 +1,23 @@
 <?php
 
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Livewire\Pages\Auth\Login;
+use App\Livewire\Pages\Auth\Register;
+use App\Livewire\Pages\Auth\ResetPassword;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 Route::middleware('guest')->group(function () {
-    Volt::route('register', 'pages.auth.register')
+    Volt::route('register', Register::class)
         ->name('register');
 
-    Volt::route('login', 'pages.auth.login')
+    Volt::route('login', Login::class)
         ->name('login');
 
-    Volt::route('forgot-password', 'pages.auth.forgot-password')
-        ->name('password.request');
+    // Volt::route('forgot-password', 'pages.auth.forgot-password')
+    //     ->name('password.request');
 
-    Volt::route('reset-password/{token}', 'pages.auth.reset-password')
+    Volt::route('reset-password/{token}', ResetPassword::class)
         ->name('password.reset');
 });
 

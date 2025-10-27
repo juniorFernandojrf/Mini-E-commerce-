@@ -17,8 +17,7 @@
     <livewire:pages.site.content.hot-deal />
     
     <!-- Conteúdo Principal -->
-    <livewire:pages.site.product-section />
-    
+    <livewire:pages.site.product-section />    
 
     <!-- Rodapé -->
     <livewire:pages.site.footer />

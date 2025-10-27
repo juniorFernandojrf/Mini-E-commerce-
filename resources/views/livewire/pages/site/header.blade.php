@@ -4,7 +4,7 @@
 
         <!-- LOGO -->
         <div class="flex-shrink-0">
-            <a href="" class="flex items-center">
+            <a href="/" class="flex items-center">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-12 w-auto">
             </a>
         </div>
@@ -106,8 +106,8 @@
                 <li><a href="" class="block text-gray-700 hover:text-indigo-600">Cart</a></li>
                 <li><a href="" class="block text-gray-700 hover:text-indigo-600">My Account</a></li>
             @else
-                <li><a href="" class="block text-gray-700 hover:text-indigo-600">Login</a></li>
-                <li><a href="" class="block text-gray-700 hover:text-indigo-600">Register</a></li>
+                <li><a href="{{ route('login') }}" class="block text-gray-700 hover:text-indigo-600">Login</a></li>
+                <li><a href="{{ route('register') }}" class="block text-gray-700 hover:text-indigo-600">Register</a></li>
             @endauth
         </ul>
     </div>

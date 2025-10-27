@@ -1,8 +1,13 @@
 <?php
 
+use App\Livewire\Pages\Site\HomePage;
+use App\Livewire\Pages\Site\ProductDetails;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome');
+
+// Route::get('/', HomePage::class)->name('home');
+Route::view('/', 'layouts.site');
+Route::get('/product/details', ProductDetails::class)->name('product.details');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

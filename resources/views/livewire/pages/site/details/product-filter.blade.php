@@ -4,9 +4,9 @@
         <div>
             <select wire:model.live="selectedCategory" class="border-gray-300 rounded-md text-gray-700">
                 <option value="">All Categories</option>
-                @foreach($categories as $category)
+                {{-- @foreach($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
-                @endforeach
+                @endforeach --}}
             </select>
         </div>
 
@@ -26,17 +26,17 @@
 
     <!-- Produtos -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        @forelse ($products as $product)
+        {{-- @forelse ($products as $product) --}}
             <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition">
-                <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="w-full h-48 object-cover">
+                <img src="#" alt="#" class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-semibold text-gray-800">{{ $product->name }}</h3>
-                    <p class="text-sm text-gray-500 mb-2">{{ $product->brand }}</p>
-                    <p class="text-indigo-600 font-bold">${{ number_format($product->price, 2) }}</p>
+                    <h3 class="text-lg font-semibold text-gray-800">ola</h3>
+                    <p class="text-sm text-gray-500 mb-2">ollllll</p>
+                    <p class="text-indigo-600 font-bold">$20000</p>
                 </div>
             </div>
-        @empty
+        {{-- @empty
             <div class="col-span-full text-center text-gray-500">No products found.</div>
-        @endforelse
+        @endforelse --}}
     </div>
 </div>

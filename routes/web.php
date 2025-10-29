@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Pages\Admin\AdminDashboard;
 use App\Livewire\Pages\Admin\Content;
 use App\Livewire\Pages\Admin\Header;
 use App\Livewire\Pages\Site\HomePage;
@@ -11,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'layouts.site');
 Route::get('/product/details', ProductDetails::class)->name('product.details');
 
-Route::get('dashboard', Content::class)
-    // ->middleware(['auth', 'verified'])
+Route::get('/admin/dashboard', AdminDashboard::class)
+//     // ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
 Route::view('profile', 'profile')

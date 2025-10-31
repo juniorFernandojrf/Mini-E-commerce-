@@ -10,9 +10,9 @@
 </head>
 <body class="bg-gray-800 font-sans">
 
-    <div class=" max-w-md mx-auto mt-10 p-6  ">
+    {{-- <div class=" max-w-md mx-auto mt-10 p-6  "> --}}
         {{ $slot }}
-    </div>
+    {{-- </div> --}}
 
     @livewireScripts
 </body>

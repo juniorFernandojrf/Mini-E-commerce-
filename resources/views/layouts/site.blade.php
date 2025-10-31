@@ -8,13 +8,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
 
     <!-- Cabeçalho -->
     <livewire:pages.site.header />
-
-    <!-- Banner -->
-    <livewire:pages.site.content.hot-deal />
     
     <!-- Conteúdo Principal -->
     <livewire:pages.site.product-section />    

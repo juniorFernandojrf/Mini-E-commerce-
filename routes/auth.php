@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Actions\Logout;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Livewire\Pages\Auth\Login;
 use App\Livewire\Pages\Auth\Register;
@@ -13,6 +15,12 @@ Route::middleware('guest')->group(function () {
 
     Volt::route('login', Login::class)
         ->name('login');
+
+    Volt::route('logout', Logout::class)
+        ->name('logout');
+
+    Route::post('register', [RegisteredUserController::class, 'store'])
+        ->name('register');
 
     // Volt::route('forgot-password', 'pages.auth.forgot-password')
     //     ->name('password.request');

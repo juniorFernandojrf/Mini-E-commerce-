@@ -11,21 +11,20 @@
         </div>
 
         <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {{-- Caso queira usar um card estático como placeholder, mantenha abaixo: --}}
             @livewire('pages.site.content.product-card')
+
+            {{-- Se quiser listar dinamicamente, descomente e use o loop abaixo --}}
             {{-- @foreach ($products as $product)
-                @livewire(
-                    'components.product-card',
-                    [
-                        'image' => $product->image,
-                        'name' => $product->name,
-                        'category' => $product->category,
-                        'price' => $product->price,
-                        'oldPrice' => $product->old_price,
-                        'sale' => $product->sale,
-                        'new' => $product->is_new,
-                    ],
-                    key($product->id)
-                )
+                @livewire('pages.site.content.product-card', [
+                    'image' => $product->image,
+                    'name' => $product->name,
+                    'category' => $product->category->name ?? '',
+                    'price' => $product->price,
+                    'oldPrice' => $product->old_price ?? null,
+                    'sale' => $product->sale ?? null,
+                    'new' => $product->is_new ?? null,
+                ], key($product->id))
             @endforeach --}}
         </div>
     </div>
